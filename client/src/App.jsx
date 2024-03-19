@@ -8,6 +8,9 @@ function App() {
         <h1 className="head-text">
         ThreeJS
         </h1>
+          <Home />
+          <Canvas />
+          <Customizer />
       </main>
 
   )
