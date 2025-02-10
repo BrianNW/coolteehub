@@ -10,6 +10,9 @@ import {
 } from '../config/motion'
 
 const Home = () => {
+
+  // one current snapshot of this state
+  const snap = useSnapshot(state);
   return (
     <div>Home</div>
   )
