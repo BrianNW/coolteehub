@@ -13,13 +13,16 @@ const Home = () => {
 
   // one current snapshot of this state
   const snap = useSnapshot(state);
+  
+  // Check if snap is working
+  console.log("Snap Intro:", snap.into);
   return (
     <AnimatePresence>
-      {snap.into && (
-        <motion.section className="home"> {...slideAnimation('left')} 
+      {snap.intro && (
+        <motion.section className="home" {...slideAnimation('left')}>         
           <motion.header>
             <img 
-              src='./threejs.png'
+              src={snap.logoDecal}
               alt="logo"
               className="w-8 h-8 object-contain"
             />
