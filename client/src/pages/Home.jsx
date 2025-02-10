@@ -14,7 +14,19 @@ const Home = () => {
   // one current snapshot of this state
   const snap = useSnapshot(state);
   return (
-    <div>Home</div>
+    <AnimatePresence>
+      {snap.into && (
+        <motion.section className="home"> {...slideAnimation('left')} 
+          <motion.header>
+            <img 
+              src='./threejs.png'
+              alt="logo"
+              className="w-8 h-8 object-contain"
+            />
+          </motion.header>
+        </motion.section>
+      )}
+    </AnimatePresence>
   )
 }
 
